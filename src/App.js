@@ -3,6 +3,7 @@ import './App.css';
 import Todos from "./components/Todos";
 import Header from "./components/layouts/Header";
 import AddTodo from "./components/AddTodo";
+import Footer from "./components/layouts/Footer";
 import uuid from 'uuid'
 
 class App extends Component {
@@ -61,6 +62,7 @@ class App extends Component {
                     <Header/>
                     <AddTodo addTodo={this.addTodo}/>
                     <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
+                    <Footer/>
                 </div>
             </div>
         );
