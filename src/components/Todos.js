@@ -1,19 +1,66 @@
-import React, {Component} from 'react';
+import React, { useState} from 'react';
 import TodoItem from "./TodoItem";
-import PropTypes from 'prop-types';
+import uuid from 'uuid'
+import AddTodo from "./AddTodo";
 
 
-class Todos extends Component{
-    render(){
-        return this.props.todos.map((todo)=>(
-        <TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete } delTodo={this.props.delTodo}/>
-            ));
+function Todos() {
+
+    const [todos, setTodos] = useState([
+        {
+            id: uuid.v4(),
+            title: 'Details of the todo',
+            completed: false
+        },
+        {
+            id: uuid.v4(),
+            title: 'Going to the market',
+            completed: false
+        },
+        {
+            id: uuid.v4(),
+            title: 'Reading a novel',
+            completed: false
+        }
+    ]);
+
+    //Add Todo
+    const addTodo = title => {
+        const newTodos = [...todos, {
+            id: uuid.v4(),
+            title,
+            completed: false
+        }];
+        setTodos(newTodos);
     }
-}
 
-//PropTypes
-Todos.propTypes={
-    todos:PropTypes.array.isRequired
+    //delete Todo
+    const delTodo = index => {
+        const newTodos = [...todos];
+        newTodos.splice(index, 1);
+        setTodos(newTodos);
+    };
+
+    //toggleComplete
+    const toggleComplete=index=>{
+        const newTodos=[...todos];
+        newTodos[index].completed=!newTodos[index].completed
+        setTodos(newTodos);
+    }
+
+
+    return (
+        <div>
+            <AddTodo addTodo={addTodo}/>
+            {
+                todos.map((todo, index) => (
+                    <TodoItem key={index} index={index} todo={todo}  toggleComplete={toggleComplete} delTodo={delTodo}/>
+                ))
+            }
+        </div>
+
+
+    )
 }
 
 export default Todos;
