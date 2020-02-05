@@ -1,8 +1,7 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import TodoItem from "./TodoItem";
 import uuid from 'uuid'
 import AddTodo from "./AddTodo";
-
 
 function Todos() {
 
@@ -23,7 +22,6 @@ function Todos() {
             completed: false
         }
     ]);
-
     //Add Todo
     const addTodo = title => {
         const newTodos = [...todos, {
@@ -33,14 +31,12 @@ function Todos() {
         }];
         setTodos(newTodos);
     }
-
     //delete Todo
     const delTodo = index => {
         const newTodos = [...todos];
         newTodos.splice(index, 1);
         setTodos(newTodos);
     };
-
     //toggleComplete
     const toggleComplete=index=>{
         const newTodos=[...todos];
@@ -48,6 +44,9 @@ function Todos() {
         setTodos(newTodos);
     }
 
+    useEffect(()=>{
+        document.title=todos.length+" todos"
+    })
 
     return (
         <div>
@@ -59,8 +58,6 @@ function Todos() {
             }
         </div>
 
-
     )
 }
-
 export default Todos;
