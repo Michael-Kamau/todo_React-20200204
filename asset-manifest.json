@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/todo_React-20200204/static/css/main.f9f6dbcc.chunk.css",
+    "main.js": "/todo_React-20200204/static/js/main.a4edb995.chunk.js",
+    "main.js.map": "/todo_React-20200204/static/js/main.a4edb995.chunk.js.map",
+    "runtime-main.js": "/todo_React-20200204/static/js/runtime-main.8e6415e3.js",
+    "runtime-main.js.map": "/todo_React-20200204/static/js/runtime-main.8e6415e3.js.map",
+    "static/js/2.e7f8c452.chunk.js": "/todo_React-20200204/static/js/2.e7f8c452.chunk.js",
+    "static/js/2.e7f8c452.chunk.js.map": "/todo_React-20200204/static/js/2.e7f8c452.chunk.js.map",
+    "index.html": "/todo_React-20200204/index.html",
+    "precache-manifest.8a15eabdcd9769cc4ee3ca34cdfb6b07.js": "/todo_React-20200204/precache-manifest.8a15eabdcd9769cc4ee3ca34cdfb6b07.js",
+    "service-worker.js": "/todo_React-20200204/service-worker.js",
+    "static/css/main.f9f6dbcc.chunk.css.map": "/todo_React-20200204/static/css/main.f9f6dbcc.chunk.css.map",
+    "static/js/2.e7f8c452.chunk.js.LICENSE.txt": "/todo_React-20200204/static/js/2.e7f8c452.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e6415e3.js",
+    "static/js/2.e7f8c452.chunk.js",
+    "static/css/main.f9f6dbcc.chunk.css",
+    "static/js/main.a4edb995.chunk.js"
+  ]
+}
